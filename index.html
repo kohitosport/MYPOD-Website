@@ -20,13 +20,21 @@ background:#000;
 font-family:Arial;
 }
 
-/* الصور */
+/* ===== الصور ===== */
 .hero-desktop,
 .hero-mobile{
 width:100%;
 height:100vh;
-object-fit:cover;
 display:block;
+}
+
+.hero-desktop{
+object-fit:cover;
+}
+
+.hero-mobile{
+object-fit:contain;
+background:black;
 }
 
 /* إخفاء/إظهار حسب الجهاز */
@@ -35,14 +43,14 @@ display:block;
 @media (max-width:768px){
 
 .hero-desktop{ display:none; }
-.hero-mobile{ display:block; object-fit:cover; }
+.hero-mobile{ display:block; }
 
 }
 
-/* المحتوى */
+/* ===== المحتوى ===== */
 .content{
 position:absolute;
-top:78%;
+top:84%;
 left:50%;
 transform:translate(-50%,-50%);
 display:flex;
@@ -53,7 +61,7 @@ gap:12px;
 width:100%;
 }
 
-/* الزر */
+/* ===== الزر ===== */
 .btn{
 background:#C8A76A;
 color:white;
@@ -69,13 +77,13 @@ background:#DAB97B;
 transform:scale(1.05);
 }
 
-/* النص الصغير */
+/* ===== النص الصغير ===== */
 .small-text{
 color:#C8A76A;
 font-size:12px;
 }
 
-/* السوشيال */
+/* ===== الأيقونات ===== */
 .social{
 display:flex;
 gap:18px;
@@ -87,7 +95,7 @@ color:#C8A76A;
 text-decoration:none;
 }
 
-/* contact */
+/* ===== Contact ===== */
 .contact{
 color:#C8A76A;
 font-size:13px;
@@ -100,7 +108,7 @@ text-decoration:underline;
 
 <body>
 
-<!-- صور مختلفة -->
+<!-- صور مختلفة للجهاز -->
 <img class="hero-desktop" src="design-desktop.png">
 <img class="hero-mobile" src="design-mobile.png">
 

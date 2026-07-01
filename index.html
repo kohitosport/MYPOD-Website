@@ -9,163 +9,78 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
 html,body{
-
 margin:0;
-
 padding:0;
-
 background:#000;
-
 overflow:hidden;
-
-font-family:Arial, sans-serif;
-
-}
-
-.container{
-
-position:relative;
-
-width:100%;
-
+font-family:Arial;
 }
 
 .hero{
-
-display:block;
-
 width:100%;
-
-min-height:100vh;
-
+height:100vh;
 object-fit:cover;
-
+display:block;
 }
 
-.btn{
-
+/* المحتوى كله في المنتصف */
+.content{
 position:absolute;
-
 top:75%;
-
 left:50%;
-
 transform:translate(-50%,-50%);
-
-background:#C8A76A;
-
-color:white;
-
-padding:16px 42px;
-
-border-radius:999px;
-
-text-decoration:none;
-
-font-size:18px;
-
-transition:.3s;
-
+display:flex;
+flex-direction:column;
+align-items:center;
 text-align:center;
+gap:10px;
+width:100%;
+}
 
+/* الزر */
+.btn{
+background:#C8A76A;
+color:white;
+padding:16px 42px;
+border-radius:999px;
+text-decoration:none;
+font-size:18px;
+transition:.3s;
 }
 
 .btn:hover{
-
 background:#DAB97B;
-
-transform:translate(-50%,-50%) scale(1.05);
-
+transform:scale(1.05);
 }
 
-/* النص الصغير تحت الزر */
+/* النص الصغير */
 .small-text{
-
-position:absolute;
-
-top:82%;
-
-left:50%;
-
-transform:translateX(-50%);
-
 color:#C8A76A;
-
 font-size:12px;
-
-opacity:0.9;
-
 }
 
-/* Contact us */
-.contact{
-
-position:absolute;
-
-top:86%;
-
-left:50%;
-
-transform:translateX(-50%);
-
-color:#C8A76A;
-
-font-size:13px;
-
-text-decoration:underline;
-
-cursor:pointer;
-
-opacity:0.9;
-
-}
-
-.contact:hover{
-
-opacity:1;
-
-}
-
-/* أيقونات السوشيال */
+/* السوشيال */
 .social{
-
-position:absolute;
-
-top:80%;
-
-left:50%;
-
-transform:translateX(-50%);
-
 display:flex;
-
 gap:18px;
-
 }
 
 .icon{
-
 font-size:26px;
-
 color:#C8A76A;
-
 text-decoration:none;
-
-transition:.3s;
-
 }
 
-.icon:hover{
-
-opacity:.75;
-
+/* Contact */
+.contact{
+color:#C8A76A;
+font-size:13px;
+text-decoration:underline;
 }
 
 </style>
@@ -178,12 +93,10 @@ opacity:.75;
 
 <img class="hero" src="design.png">
 
-<a class="btn"
-href="https://forms.gle/h5rs7GbeX8eCWi8j7"
-target="_blank">
+<div class="content">
 
+<a class="btn" href="https://forms.gle/h5rs7GbeX8eCWi8j7" target="_blank">
 Join the Waitlist
-
 </a>
 
 <div class="small-text">
@@ -192,31 +105,21 @@ VIP opening invites & exclusive offers
 
 <div class="social">
 
-<a class="icon"
-href="http://www.instagram.com/mypod_pilates/"
-target="_blank">
-
+<a class="icon" href="http://www.instagram.com/mypod_pilates/" target="_blank">
 <i class="fa-brands fa-instagram"></i>
-
 </a>
 
-<a class="icon"
-href="http://linktr.ee/mypod.pilates"
-target="_blank">
-
+<a class="icon" href="http://linktr.ee/mypod.pilates" target="_blank">
 <i class="fa-solid fa-link"></i>
-
 </a>
 
 </div>
 
-<a class="contact"
-href="http://linktr.ee/mypod.pilates"
-target="_blank">
-
+<a class="contact" href="http://linktr.ee/mypod.pilates" target="_blank">
 Contact us
-
 </a>
+
+</div>
 
 </div>
 

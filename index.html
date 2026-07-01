@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MYPOD</title>
-<link rel="icon" href="favicon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYPOD</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #000; font-family: Arial, sans-serif; height: 100vh; }
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; font-family: Arial, sans-serif; height: 100vh; overflow: hidden; }
 
-    /* الحل الجذري للصور: استخدام picture لضمان عدم وجود flicker */
-    .hero-container { width: 100%; height: 100vh; position: relative; }
-    .hero-container picture, .hero-container img { width: 100%; height: 100%; display: block; }
-    .hero-container img { object-fit: cover; }
+        .hero-container { width: 100%; height: 100vh; position: relative; }
+        
+        /* الصورة */
+        .hero-image { width: 100%; height: 100%; display: block; }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; /* تحافظ على ملء الشاشة */
+            object-position: center center; /* تضمن توسيط الصورة وعدم ميل القص لجهة معينة */
+        }
 
-    /* المحتوى: توزيع ثابت باستخدام flexbox */
-    .content {
-        position: absolute;
-        bottom: 50px; /* المسافة من أسفل الشاشة ثابتة دائماً */
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 0 20px;
-    }
+        /* المحتوى */
+        .content {
+            position: absolute;
+            bottom: 60px; /* المسافة من الأسفل */
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 0 20px;
+        }
 
-    .btn { background:#C8A76A; color:white; padding:18px 50px; border-radius:999px; text-decoration:none; font-size:18px; transition:.3s; }
-    .btn:hover { transform:scale(1.05); background:#DAB97B; }
-    .small-text { color:#C8A76A; font-size:13px; }
-    .social { display:flex; gap:18px; }
-    .icon { font-size:28px; color:#C8A76A; }
-    .contact { color:#C8A76A; font-size:13px; text-decoration:underline; }
+        .btn { background:#C8A76A; color:white; padding:18px 50px; border-radius:999px; text-decoration:none; font-size:18px; transition:.3s; }
+        .btn:hover { transform:scale(1.05); background:#DAB97B; }
+        .small-text { color:#C8A76A; font-size:13px; text-align: center; }
+        .social { display:flex; gap:18px; }
+        .icon { font-size:28px; color:#C8A76A; }
+        .contact { color:#C8A76A; font-size:13px; text-decoration:underline; }
 
-    /* تحسين للموبايل */
-    @media (max-width: 768px) {
-        .btn { padding: 15px 40px; font-size: 16px; }
-    }
-</style>
+        /* تحسينات الموبايل */
+        @media (max-width: 768px) {
+            .btn { padding: 15px 40px; font-size: 16px; }
+            .hero-image img {
+                /* إذا استمرت مشكلة القص، يمكنك إلغاء التعليق عن السطر التالي لضبط وضع القص */
+                /* object-position: center bottom; */
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="hero-container">
-    <picture>
-        <source media="(max-width: 768px)" srcset="design-mobile.png">
-        <img src="design-desktop.png" alt="MYPOD Background">
-    </picture>
+    <div class="hero-container">
+        <!-- استخدام picture يضمن تحميل الصورة المناسبة لكل جهاز -->
+        <picture class="hero-image">
+            <source media="(max-width: 768px)" srcset="design-mobile.png">
+            <img src="design-desktop.png" alt="MYPOD Background">
+        </picture>
 
-    <div class="content">
-        <a class="btn" href="https://forms.gle/h5rs7GbeX8eCWi8j7" target="_blank">Join the Waitlist</a>
-        <div class="small-text">VIP opening invites & exclusive offers</div>
-        <div class="social">
-            <a class="icon" href="http://www.instagram.com/mypod_pilates/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a class="icon" href="http://linktr.ee/mypod.pilates" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <div class="content">
+            <a class="btn" href="https://forms.gle/h5rs7GbeX8eCWi8j7" target="_blank">Join the Waitlist</a>
+            <div class="small-text">VIP opening invites & exclusive offers</div>
+            <div class="social">
+                <a class="icon" href="http://www.instagram.com/mypod_pilates/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a class="icon" href="http://linktr.ee/mypod.pilates" target="_blank"><i class="fa-solid fa-link"></i></a>
+            </div>
+            <a class="contact" href="http://linktr.ee/mypod.pilates" target="_blank">Contact us</a>
         </div>
-        <a class="contact" href="http://linktr.ee/mypod.pilates" target="_blank">Contact us</a>
     </div>
-</div>
 
 </body>
 </html>

@@ -17,28 +17,39 @@ html,body{
 margin:0;
 padding:0;
 background:#000;
-overflow:hidden;
 font-family:Arial;
 }
 
-.hero{
+/* الصور */
+.hero-desktop,
+.hero-mobile{
 width:100%;
 height:100vh;
 object-fit:cover;
 display:block;
 }
 
-/* المحتوى كله في المنتصف */
+/* إخفاء/إظهار حسب الجهاز */
+.hero-mobile{ display:none; }
+
+@media (max-width:768px){
+
+.hero-desktop{ display:none; }
+.hero-mobile{ display:block; object-fit:cover; }
+
+}
+
+/* المحتوى */
 .content{
 position:absolute;
-top:75%;
+top:78%;
 left:50%;
 transform:translate(-50%,-50%);
 display:flex;
 flex-direction:column;
 align-items:center;
 text-align:center;
-gap:10px;
+gap:12px;
 width:100%;
 }
 
@@ -76,7 +87,7 @@ color:#C8A76A;
 text-decoration:none;
 }
 
-/* Contact */
+/* contact */
 .contact{
 color:#C8A76A;
 font-size:13px;
@@ -89,9 +100,9 @@ text-decoration:underline;
 
 <body>
 
-<div class="container">
-
-<img class="hero" src="design.png">
+<!-- صور مختلفة -->
+<img class="hero-desktop" src="design-desktop.png">
+<img class="hero-mobile" src="design-mobile.png">
 
 <div class="content">
 
@@ -118,8 +129,6 @@ VIP opening invites & exclusive offers
 <a class="contact" href="http://linktr.ee/mypod.pilates" target="_blank">
 Contact us
 </a>
-
-</div>
 
 </div>
 

@@ -1,41 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
+
 <title>MYPOD</title>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
-body{
+html,body{
+
 margin:0;
+
+padding:0;
+
+background:black;
+
+overflow:hidden;
+
 }
 
 .container{
+
 position:relative;
+
 }
 
-img{
+.hero{
+
 width:100%;
+
 display:block;
+
 }
 
 .btn{
+
 position:absolute;
 
-top:70%;
+top:72%;
+
 left:50%;
 
 transform:translate(-50%,-50%);
 
-background:black;
+background:#C8A76A;
 
 color:white;
 
-padding:15px 40px;
+padding:16px 42px;
+
+border-radius:999px;
 
 text-decoration:none;
 
-border-radius:999px;
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#DAB97B;
+
+transform:
+translate(-50%,-50%)
+scale(1.05);
+
+}
+
+.social{
+
+position:absolute;
+
+top:81%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+display:flex;
+
+gap:18px;
+
+}
+
+.icon{
+
+color:#C8A76A;
+
+font-size:26px;
+
+text-decoration:none;
+
+}
+
+.icon:hover{
+
+opacity:.8;
 
 }
 
@@ -47,16 +115,55 @@ border-radius:999px;
 
 <div class="container">
 
-<img src="design.png">
+<img
+class="hero"
+src="design.png">
 
 <a
+
 class="btn"
-href="https://instagram.com"
+
+href="https://forms.gle/h5rs7GbeX8eCWi8j7"
+
+target="_blank"
+
 >
 
-احجز الآن
+Get Updates
 
 </a>
+
+<div class="social">
+
+<a
+
+class="icon"
+
+href="https://www.instagram.com/mypod_pilates/"
+
+target="_blank"
+
+>
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+<a
+
+class="icon"
+
+href="https://linktr.ee/mypod.pilates"
+
+target="_blank"
+
+>
+
+<i class="fa-solid fa-link"></i>
+
+</a>
+
+</div>
 
 </div>
 

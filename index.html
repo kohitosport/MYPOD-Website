@@ -20,30 +20,28 @@ background:#000;
 font-family:Arial;
 }
 
-/* ===== الصور ===== */
-.hero-desktop,
-.hero-mobile{
+/* ===== الصور (حل نهائي للموبايل والديسكتوب) ===== */
+.hero{
 width:100%;
 height:100vh;
 display:block;
-}
-
-.hero-desktop{
 object-fit:cover;
 }
 
+/* نخفي/نظهر حسب الجهاز */
 .hero-mobile{
-object-fit:contain;
-background:black;
+display:none;
 }
-
-/* إخفاء/إظهار حسب الجهاز */
-.hero-mobile{ display:none; }
 
 @media (max-width:768px){
 
-.hero-desktop{ display:none; }
-.hero-mobile{ display:block; }
+.hero-desktop{
+display:none;
+}
+
+.hero-mobile{
+display:block;
+}
 
 }
 
@@ -108,9 +106,9 @@ text-decoration:underline;
 
 <body>
 
-<!-- صور مختلفة للجهاز -->
-<img class="hero-desktop" src="design-desktop.png">
-<img class="hero-mobile" src="design-mobile.png">
+<!-- صور الموقع -->
+<img class="hero hero-desktop" src="design-desktop.png">
+<img class="hero hero-mobile" src="design-mobile.png">
 
 <div class="content">
 

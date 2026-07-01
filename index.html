@@ -15,8 +15,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <style>
 
-html,
-body{
+html,body{
 
 margin:0;
 
@@ -25,6 +24,8 @@ padding:0;
 background:#000;
 
 overflow:hidden;
+
+font-family:Arial, sans-serif;
 
 }
 
@@ -72,23 +73,72 @@ font-size:18px;
 
 transition:.3s;
 
+text-align:center;
+
 }
 
 .btn:hover{
 
 background:#DAB97B;
 
-transform:
-translate(-50%,-50%)
-scale(1.05);
+transform:translate(-50%,-50%) scale(1.05);
 
 }
 
+/* النص الصغير تحت الزر */
+.small-text{
+
+position:absolute;
+
+top:82%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+color:#C8A76A;
+
+font-size:12px;
+
+opacity:0.9;
+
+}
+
+/* Contact us */
+.contact{
+
+position:absolute;
+
+top:86%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+color:#C8A76A;
+
+font-size:13px;
+
+text-decoration:underline;
+
+cursor:pointer;
+
+opacity:0.9;
+
+}
+
+.contact:hover{
+
+opacity:1;
+
+}
+
+/* أيقونات السوشيال */
 .social{
 
 position:absolute;
 
-top:81%;
+top:80%;
 
 left:50%;
 
@@ -126,55 +176,47 @@ opacity:.75;
 
 <div class="container">
 
-<img
-class="hero"
-src="design.png">
+<img class="hero" src="design.png">
 
-<a
-
-class="btn"
-
+<a class="btn"
 href="https://forms.gle/h5rs7GbeX8eCWi8j7"
+target="_blank">
 
-target="_blank"
-
->
-
-Get Updates
+Join the Waitlist
 
 </a>
 
+<div class="small-text">
+VIP opening invites & exclusive offers
+</div>
+
 <div class="social">
 
-<a
-
-class="icon"
-
-href="https://www.instagram.com/mypod_pilates/"
-
-target="_blank"
-
->
+<a class="icon"
+href="http://www.instagram.com/mypod_pilates/"
+target="_blank">
 
 <i class="fa-brands fa-instagram"></i>
 
 </a>
 
-<a
-
-class="icon"
-
-href="https://linktr.ee/mypod.pilates"
-
-target="_blank"
-
->
+<a class="icon"
+href="http://linktr.ee/mypod.pilates"
+target="_blank">
 
 <i class="fa-solid fa-link"></i>
 
 </a>
 
 </div>
+
+<a class="contact"
+href="http://linktr.ee/mypod.pilates"
+target="_blank">
+
+Contact us
+
+</a>
 
 </div>
 
